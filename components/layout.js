@@ -43,7 +43,7 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <Image
                 priority
-                src="/images/tcsimf.jpeg"
+                src="/images/tcsimg.jpeg"
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}

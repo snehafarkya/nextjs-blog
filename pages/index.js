@@ -15,20 +15,18 @@ export async function getStaticProps() {
 }
 export default function Home({allPostsData}) {
   return (
-    <Layout home>
+    <div className={utilStyles.contain}>
+    <Layout home >
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section className={utilStyles.headingMd }>
         <p >Great to see you here! I am Sneha Farkya, a BCA graduate from Medi-Caps University, Indore. I am a Frontend Developer and Technical Writer.
 
         In my role as a Front-end developer, I combine technical expertise with creativity. My passion for designing and developing user-friendly web applications has lead me to sharpen my skills in HTML, CSS, and JavaScript to provide dynamic, responsive user interfaces.
         </p>
         <p >You can connect with me here on <Link href="https://linktr.ee/sneha_farkya">Linktree</Link> </p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+          
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -46,5 +44,6 @@ export default function Home({allPostsData}) {
         </ul>
       </section>
     </Layout>
+    </div>
   );
 }
