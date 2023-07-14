@@ -1,6 +1,6 @@
 ---
 title: 'Petra - A Rose City'
-date: '2020-01-01'
+date: '2023-07-13'
 ---
 
 It might sound like a city full of roses, right? Read the full article to know the mystery behind it.

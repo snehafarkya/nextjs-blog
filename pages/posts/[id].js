@@ -6,6 +6,7 @@ import utilStyles from '../../styles/utils.module.css';
 
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
+// getting post data
 export async function getStaticProps({ params }) {
   const postData =await getPostData(params.id);
   return {
@@ -15,6 +16,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
+// gettingpost id
 export async function getStaticPaths() {
   const paths = getAllPostIds();
   return {

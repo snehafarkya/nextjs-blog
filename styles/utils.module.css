@@ -70,6 +70,8 @@
 }
 .buttons:hover{
   filter: drop-shadow(2px 2px 2px gray);
+  background-color: rgba(124, 123, 123, 0.682);
+  backdrop-filter: blur(20px);
 }
 .link{
   color: white;

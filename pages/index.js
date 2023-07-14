@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Date from '../components/date';
 import { getSortedPostsData } from '../lib/posts';
 
+// this function is used to get the data from getSortedPostsData() and send it as a prop to Homee()
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -13,7 +14,7 @@ export async function getStaticProps() {
     },
   };
 }
-export default function Home({allPostsData}) {
+export default function Home({ allPostsData }) {
   return (
     <div className={utilStyles.contain}>
     <Layout home >
@@ -32,6 +33,7 @@ export default function Home({allPostsData}) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
+          {/* using map method to fetch data */}
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
             <Link href={`/posts/${id}`}>{title}</Link>
@@ -41,6 +43,7 @@ export default function Home({allPostsData}) {
             </small>
           </li>
           ))}
+          
         </ul>
       </section>
     </Layout>
